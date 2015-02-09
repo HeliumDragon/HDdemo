@@ -1,0 +1,56 @@
+<div class="drawContainer">
+<canvas	width="600" height="400"></canvas>
+<div class="controls">
+  <ul>
+    <li ng-click='pickColor()'
+        ng-repeat='c in colors'
+        style='background:{{c.color}}'
+        ng-class = '{"highlight":c.chosen}'
+        ></li>
+  </ul>
+  <div class="btnGroup">
+  	<button class="btn btn-info" data-toggle="modal" data-target="#colorSelect">New Color</button>
+	<a  download="mydrawing.png" id="download" class="btn btn-success">download drawing
+	</a>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="colorSelect" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Color Picker</h4>
+      </div>
+      <div class="modal-body">
+        <div id="swatch" style='background:{{hex}}'></div>
+        <p>
+        <label for="red">Red</label>
+        <input ng-model="color.red"
+               ng-change="getHex()"
+               id="red" name="red" type="range"
+               min=0 max=255 value=0 >
+      </p>
+      <p>
+        <label for="green">Green</label>
+        <input ng-model="color.green"
+               ng-change="getHex()"
+               id="green" name="green" type="range" min=0 max=255 value=0>
+      </p>
+      <p>
+        <label for="blue">Blue</label>
+        <input ng-model="color.blue"
+               ng-change="getHex()"
+               id="blue" name="blue" type="range" min=0 max=255 value=0>
+      </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="addNewColor" class="btn btn-success" ng-click="addColor()" data-dismiss="modal">Add Color</button>
+      </div>
+    </div>
+  </div>
+</div>
