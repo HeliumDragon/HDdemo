@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -23,7 +24,10 @@
    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#/">HD Demo App</a>
+          <a class="navbar-brand" href="#/">
+            <img src="images/logo.png" alt="logo" class="logo">
+            HD
+          </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -45,7 +49,7 @@
             <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
             <li><a href="#/draw">Drawing App</a></li>
             <li><a href="#">Analytics</a></li>
-            <li><a href="#">Crypto</a></li>
+            <li><a href="#/crypto">Crypto</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li><a href="">item</a></li>
@@ -88,6 +92,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -96,6 +101,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/draw.js"></script>
+        <script src="scripts/controllers/crypto.js"></script>
         <!-- endbuild -->
 </body>
 </html>

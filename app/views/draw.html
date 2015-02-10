@@ -1,20 +1,20 @@
 <div class="drawContainer">
-<canvas	width="600" height="400"></canvas>
-<div class="controls">
-  <ul>
-    <li ng-click='pickColor()'
-        ng-repeat='c in colors'
-        style='background:{{c.color}}'
-        ng-class = '{"highlight":c.chosen}'
-        ></li>
-  </ul>
-  <div class="btnGroup">
-  	<button class="btn btn-info" data-toggle="modal" data-target="#colorSelect">New Color</button>
-	<a  download="mydrawing.png" id="download" class="btn btn-success">download drawing
-	</a>
-  </div>
+	<canvas	width="600" height="400"></canvas>
+	<div class="controls">
+	  <ul>
+	    <li ng-click='pickColor()'
+	        ng-repeat='c in colors'
+	        style='background:{{c.color}}'
+	        ng-class = '{"highlight":c.chosen}'
+	        ></li>
+	  </ul>
+	  <div class="btnGroup">
+	  	<button class="btn btn-info" data-toggle="modal" data-target="#colorSelect">New Color</button>
+		<a  download="mydrawing.png" id="download" class="btn btn-success">download drawing
+		</a>
+	  </div>
+	</div>
 </div>
-
 
 
 <!-- Modal -->

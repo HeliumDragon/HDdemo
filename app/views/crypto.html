@@ -1,0 +1,72 @@
+<div class="cryptoContainer">
+	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#encrypt">Encrypt Your Message </button>
+	<button class="btn btn-success btn-lg" data-toggle="modal" data-target="#decipher">Decipher Your Message</button>
+
+ 
+	<!-- Modal Encryption -->
+	<div class="modal fade" id="encrypt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title" id="myModalLabel">Encryption</h4>
+	      </div>
+	      <div class="modal-body">
+	      
+	      	<div class="input-group">
+			  <span class="input-group-addon"><i class="fa fa-envelope-o fa-lg"></i></span>
+			  <textarea ng-model="msg" id="msg"  type="text" class="form-control" placeholder="Your Message...e.g. meet me in the park at noon this thursday..."></textarea>		   
+			</div>
+			<br/>
+			<div class="input-group">
+			  <span class="input-group-addon"><i class="fa fa-key fa-lg"></i></span>			 	  
+			  <input ng-model="key" id="key" type="text" class="form-control" placeholder="an word containing only letters. e.g. dragonfruit">
+			</div>
+			
+			<div id="result" ng-show='encryptedText'>
+				<h5>Encrypted Message</h5>
+				<p> {{encryptedText}}</p>
+			</div>
+	      </div>
+	      <div class="modal-footer">		        
+	        <button ng-click="encrypt(msg, key)" type="button" id="enc" class="btn btn-primary">Encrypt!</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+	<!-- Modal Decipher -->
+	<div class="modal fade" id="decipher" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title" id="myModalLabel">Decipher</h4>
+	      </div>
+	      <div class="modal-body">
+	      
+	      	<div class="input-group">
+			  <span class="input-group-addon"><i class="fa fa-envelope-o fa-lg"></i></span>
+			  <textarea ng-model="ciphertext" id="demsg"  type="text" class="form-control" placeholder="your encrypted message e.g. pvez zD zh mkv voeJ rn grfn huHx npnujdgm"></textarea>		   
+			</div>
+			<br/>
+			<div class="input-group">
+			  <span class="input-group-addon"><i class="fa fa-key fa-lg"></i></span>			 	  
+			  <input ng-model="dekey" id="dekey" type="text" class="form-control" placeholder="an word containing only letters. e.g. dragonfruit">
+			</div>
+			
+			<div id="result2" ng-show="decipheredText">
+				<h5>Deciphered Message</h5>
+				<p>{{decipheredText}} </p>
+			</div>
+	      </div>
+	      <div class="modal-footer">		        
+	        <button ng-click="decipher(ciphertext, dekey)" type="button" id="888" class="btn btn-success">Decipher!</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</div> <!--crpto container -->	

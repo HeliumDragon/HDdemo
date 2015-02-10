@@ -37,6 +37,10 @@ angular
         templateUrl: 'views/draw.html',
         controller: 'DrawCtrl'
       })
+      .when('/crypto', {
+        templateUrl: 'views/crypto.html',
+        controller: 'CryptoCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
