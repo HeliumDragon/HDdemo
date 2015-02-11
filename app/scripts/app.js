@@ -21,7 +21,9 @@ angular
     'underscore',
     'moment',
     'jQuery',
-    'Highcharts'
+    'Highcharts',
+    'ui.grid',
+    'ui.calendar'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -40,6 +42,10 @@ angular
       .when('/crypto', {
         templateUrl: 'views/crypto.html',
         controller: 'CryptoCtrl'
+      })
+      .when('/football', {
+        templateUrl: 'views/football.html',
+        controller: 'FootballCtrl'
       })
       .otherwise({
         redirectTo: '/'

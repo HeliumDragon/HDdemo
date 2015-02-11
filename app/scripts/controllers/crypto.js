@@ -8,7 +8,7 @@
  * Controller of the hddemoApp
  */
 angular.module('hddemoApp')
-  .controller('CryptoCtrl', function ($scope, _, $) {
+  .controller('CryptoCtrl', function ($scope, _) {
 
 		$scope.encrypt = function(msg, key){
 

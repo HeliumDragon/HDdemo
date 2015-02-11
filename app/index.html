@@ -9,6 +9,8 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/uigrid/ui-grid.css" />
+    <link rel="stylesheet" href="bower_components/fullcalendar/fullcalendar.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -31,8 +33,6 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#/about">About</a></li>
           </ul>
@@ -46,9 +46,9 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#/">Overview <span class="sr-only">(current)</span></a></li>
             <li><a href="#/draw">Drawing App</a></li>
-            <li><a href="#">Analytics</a></li>
+            <li><a href="#/football">Football Table</a></li>
             <li><a href="#/crypto">Crypto</a></li>
           </ul>
           <ul class="nav nav-sidebar">
@@ -65,7 +65,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view=""></div>
       </div>
     </div>
-   
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -93,6 +93,11 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/uigrid/ui-grid.js"></script>
+    <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+    <script src="bower_components/fullcalendar/fullcalendar.js"></script>
+    <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -102,6 +107,8 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/draw.js"></script>
         <script src="scripts/controllers/crypto.js"></script>
+        <script src="scripts/controllers/football.js"></script>
+        <script src="scripts/services/fbservice.js"></script>
         <!-- endbuild -->
 </body>
 </html>

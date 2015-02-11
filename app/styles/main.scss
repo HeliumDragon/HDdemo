@@ -11,12 +11,8 @@ body {
   padding-top: 50px;
 }
 
-canvas {
-  background: #fff;
-  margin: 0 auto;
-  border-radius: 5px;
-  border-bottom: 2px solid black;
-  cursor: crosshair;
+.navbar-fixed-top {
+  border: 0;
 }
 
 .navbar-brand >.logo {
@@ -29,49 +25,8 @@ canvas {
   padding: 0;
 }
 
-.drawContainer, .cryptoContainer {
-  background: #555;
-  margin: 0;
-  height: 1000px;
-  padding: 3% 10%;
-  text-align: center;
-}
-
-
-#colorSelect {
-  p {
-    width:90%;
-  }
-  .modal-dialog {
-    width:350px;
-  }
-}
-
-.btnGroup button{
-  margin: 1em;
-}
-
-/*
- * Top navigation
- */
-.navbar-fixed-top {
-  border: 0;
-}
-
-.controls ul li {
-  list-style: none;
-  display: inline-block;
-}
-
-#swatch, .controls ul li {
-  width: 38px;
-  height: 38px;
-  margin: 0.5em;
-  border-radius: 50%;
-}
-
-.highlight {
-  border: 3px solid white;
+.main .page-header {
+  margin-top: 0;
 }
 
 
@@ -79,6 +34,7 @@ canvas {
 .sidebar {
   display: none;
 }
+
 
 @media (min-width: 768px) {
   .sidebar {
@@ -115,15 +71,6 @@ canvas {
 
 
 /*
- * Main content
- */
-
-.main .page-header {
-  margin-top: 0;
-}
-
-
-/*
  * Placeholder dashboard ideas
  */
 
@@ -140,4 +87,69 @@ canvas {
 .placeholder img {
   display: inline-block;
   border-radius: 50%;
+}
+
+
+/*****************
+DRAWING AND CRYPTO
+******************/
+
+.drawContainer, .cryptoContainer, .fbcontainer{
+  background: #555;
+  margin: 0;
+  height: 1000px;
+  padding: 3% 10%;
+  text-align: center;
+}
+
+canvas {
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 5px;
+  border-bottom: 2px solid black;
+  cursor: crosshair;
+}
+
+#colorSelect {
+  p {
+    width:90%;
+  }
+  .modal-dialog {
+    width:350px;
+  }
+}
+
+.btnGroup button{
+  margin: 1em;
+}
+
+
+.controls ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+#swatch, .controls ul li {
+  width: 38px;
+  height: 38px;
+  margin: 0.5em;
+  border-radius: 50%;
+}
+
+.highlight {
+  border: 3px solid white;
+}
+
+/***********
+FOOTBALL
+************/
+.myGrid {
+  width: 90%;
+  height: 80%;
+}
+.cal {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 2em;
+  padding: 1em;
 }
