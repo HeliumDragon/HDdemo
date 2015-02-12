@@ -13,16 +13,22 @@ body {
 
 .navbar-fixed-top {
   border: 0;
+  display: table;
+  width: 100%;
 }
 
+.navbar-brand{
+  display: table-cell;
+  vertical-align: middle;
+}
 .navbar-brand >.logo {
   max-width: 100%;
-  height: 38px;
+  height: 24px;
   display:inline-block;
 }
 
 .main {
-  padding: 0;
+  padding: 20px 10px 10px;
 }
 
 .main .page-header {
@@ -39,15 +45,15 @@ body {
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
-    top: 51px;
+    top: 50px;
     bottom: 0;
     left: 0;
     z-index: 1000;
     display: block;
-    padding: 20px;
+    padding: 0 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
+    background-color: #222;
     border-right: 1px solid #eee;
   }
 }
@@ -62,13 +68,11 @@ body {
   padding-right: 20px;
   padding-left: 20px;
 }
-.nav-sidebar > .active > a,
-.nav-sidebar > .active > a:hover,
-.nav-sidebar > .active > a:focus {
+.nav-sidebar > li.active > a,
+.nav-sidebar > li.active > a:active{
   color: #fff;
-  background-color: #428bca;
+  background-color: #d84c78;
 }
-
 
 /*
  * Placeholder dashboard ideas
@@ -108,6 +112,13 @@ canvas {
   border-radius: 5px;
   border-bottom: 2px solid black;
   cursor: crosshair;
+}
+
+#canvas{
+  cursor: default;
+  border: 1px solid black;
+  margin: 50px auto;
+  display: block;
 }
 
 #colorSelect {

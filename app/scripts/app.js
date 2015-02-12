@@ -23,7 +23,8 @@ angular
     'jQuery',
     'Highcharts',
     'ui.grid',
-    'ui.calendar'
+    'ui.calendar',
+    'createjs'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -47,6 +48,10 @@ angular
         templateUrl: 'views/football.html',
         controller: 'FootballCtrl'
       })
+      .when('/canvas', {
+        templateUrl: 'views/canvas.html',
+        controller: 'CanvasCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -67,4 +72,8 @@ angular
   angular.module('Highcharts', [])
   .factory('Highcharts', function() {
     return window.Highcharts;
+  });
+  angular.module('createjs', [])
+  .factory('createjs', function() {
+    return window.createjs;
   });
