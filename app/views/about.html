@@ -1,1 +1,19 @@
-<p>This is the about view.</p>
+<div class="debug">
+  <pre ng-bind='user | json'></pre>
+</div>
+
+<div class="main">
+  <h3>In page content editor</h3>
+  <div class="textarea" ng-model="user.bio" hallo>{{user.bio}}</div>
+  <ul ng-repeat="person in people">
+    <div class='col-sm-4'>
+      <p>Name: {{person.name}}</p>
+      <p>Profession: {{person.profession}}</p>
+      <p>Hometown: {{person.hometown}}</p>
+    </div>
+  </ul>
+  <contact-card data-obj="{{message.text}}"></contact-card>
+</div>
+<div class="col-md-12">
+  <input type="text" ng-model="message.text" class="form-control">
+</div>
