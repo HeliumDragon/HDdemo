@@ -29,6 +29,7 @@ body {
 
 .main {
   padding: 20px 10px 10px;
+  background: #555;
 }
 
 .main .page-header {
@@ -99,7 +100,6 @@ DRAWING AND CRYPTO
 ******************/
 
 .drawContainer, .cryptoContainer, .fbcontainer{
-  background: #555;
   margin: 0;
   height: 1000px;
   padding: 3% 10%;
@@ -154,15 +154,13 @@ canvas {
 /***********
 FOOTBALL
 ************/
-.myGrid {
-  width: 90%;
-  height: 80%;
-}
 .cal {
-  width: 100%;
   background: #fff;
   margin-bottom: 2em;
   padding: 1em;
+}
+.charts {
+  margin-bottom: 2em;
 }
 
 /************
