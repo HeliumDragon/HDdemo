@@ -1,6 +1,29 @@
-<div class="fbcontainer row">
-  <div id='chart' class='charts  col-lg-6'></div>
-  <div id='calendar' class='cal col-lg-6'></div>
+<div class="fbcontainer">
+  <div class="page-header">
+    <h1>Football Statistics <small>2011-2012 Premier League</small></h1>
+  </div>
 
   <!--<div ui-grid="{ data: matches }" class="myGrid"></div>-->
+
+  <div role="tabpanel" data-example-id="togglable-tabs">
+    <ul id="myTab" class="nav nav-tabs" role="tablist">
+      <li ng-click="showHChart()"role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" >Home Matches Analysis</a></li>
+      <li ng-click="showAChart()" role="presentation"><a href="#away" role="tab" id="away-tab" data-toggle="tab">Away Matches Analysis</a></li>
+      <li role="presentation"><a href="#table" role="tab" id="table-tab" data-toggle="tab">Football Table</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div role="tabpanel" class="tab-pane fade active in" id="home">
+        <div id='hchart' class='charts'></div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="away">
+        <div id='achart' class='charts'></div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="table">
+          <iframe src="http://jessieshi.me/bbfootball/" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id='calendar' class='cal col-lg-6'></div>
+
 </div>

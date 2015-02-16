@@ -10,7 +10,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 body {
   padding-top: 50px;
 }
-
+.page-header{
+  color: #fff;
+  small{
+    color: #ddd;
+  }
+}
 .navbar-fixed-top {
   border: 0;
   display: table;
@@ -101,7 +106,6 @@ DRAWING AND CRYPTO
 
 .drawContainer, .cryptoContainer, .fbcontainer{
   margin: 0;
-  height: 1000px;
   padding: 3% 10%;
   text-align: center;
 }
@@ -156,12 +160,19 @@ FOOTBALL
 ************/
 .cal {
   background: #fff;
-  margin-bottom: 2em;
+  margin: 2em 0;
   padding: 1em;
+  width:100%;
 }
-.charts {
-  margin-bottom: 2em;
+.nav-tabs  li  a {
+  background: #ddd;
 }
+
+iframe{
+  width: 100%;
+  height:400px
+}
+
 
 /************
 ABOUT
