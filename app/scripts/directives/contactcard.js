@@ -21,7 +21,7 @@ angular.module('hddemoApp')
         console.log(attrs);
         console.log(scope.user);
         attrs.$observe('data-obj', function(nv){
-          console.log('directive '+nv)
+          console.log('directive '+nv);
         });
       }
     };

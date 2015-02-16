@@ -21,6 +21,18 @@ angular.module('hddemoApp')
           }
         });
 
+        var converter = new Showdown.converter();
+        var formatter = function(markdown){
+          return converter.makeHtml(markdown);
+        };
+
+        var parser = function(html){
+          return toMarkdown(html);
+        };
+
+        ngModelCtrl.$formatters.push(formatter);
+        ngModelCtrl.$parsers.push(parser);
+
         ngModelCtrl.$render = function(){
           var contents = ngModelCtrl.$viewValue;
           $element.hallo('setContents', contents);
