@@ -8,13 +8,10 @@
  * Controller of the hddemoApp
  */
 angular.module('hddemoApp')
-  .controller('AboutCtrl', function ($scope, People, $http) {
+  .controller('AboutCtrl', function ($scope, People, $http, User) {
 
-  $scope.user = {
-     name: 'Zi Gong',
-     bio: '<p>Zi Gong [a disciple] asked: "Is there any one word that could guide a person throughout life?" The Master replied: "How about \'reciprocity\'! Never impose on others what you would not choose for yourself."</p>'
-   };
-
+  $scope.step = 1;
+  $scope.user = User.get();
    $http.get('data/markdown.md').success(function (bio) {
      $scope.user.bio = bio;
    });
@@ -26,5 +23,9 @@ angular.module('hddemoApp')
       console.log(nv);
     }
   });
+
+  $scope.advance = function(){
+    $scope.step++;
+  };
 
   });

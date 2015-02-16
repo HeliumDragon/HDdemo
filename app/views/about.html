@@ -17,15 +17,37 @@
 <div class="col-md-12">
   <input type="text" ng-model="message.text" class="form-control">
 </div>
-<h2>Form</h2>
-  <form action="" class="fields">
-    <label>
-      Username:
-      <input type="text" unique-check ng-model="user.username">
-    </label>
-    <label>
-      Password:
-      <input type="password" ng-model="user.password">
-    </label>
-  </form>
+<div ng-switch="step">
+  <div ng-switch-when="1">
+    <h2>Form</h2>
+    <form name="basic" class="fields">
+      <label>
+        Username:
+        <input type="text" unique-check ng-model="user.username">
+      </label>
+      <label>
+        Password:
+        <input type="password" ng-model="user.password">
+      </label>
+      <button class="btn btn-success" ng-click="advance()" ng-disabled="basic.$invalid">Next Step</button>
+    </form>
+  </div>
+  <div ng-switch-when="2">
+    <h2>Hello {{user.username}}</h2>
+    <form action="" class="fields">
+      <label>
+        Email:
+        <input type="email"  ng-model="user.email">
+      </label>
+      <label>
+        Favorite Color:
+        <input type="text" ng-model="user.favcolor">
+      </label>
+      <button class="btn btn-success" ng-click="advance()">Complete</button>
+    </form>
+  </div>
+  <div ng-switch-when="3">
+    <h2>{{user.username}}</h2>
+    <p>You like {{user.favcolor}}.</p>
+  </div>
 </div>

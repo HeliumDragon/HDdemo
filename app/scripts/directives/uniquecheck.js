@@ -14,7 +14,6 @@ angular.module('hddemoApp')
         var checkUnique = function(name){
           var isValid = !uniqueness.taken(name);
           ngModelCtrl.$setValidity('unique', isValid);
-          console.log(isValid);
           return name;
         };
         ngModelCtrl.$parsers.push(checkUnique);

@@ -14,6 +14,8 @@ angular.module('hddemoApp')
 
     var usernames = [
       'Jessie',
+      'jessie',
+      'jess',
       'Jess',
       'bot',
       'droid',
