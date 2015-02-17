@@ -54,6 +54,10 @@ angular
         templateUrl: 'views/canvas.html',
         controller: 'CanvasCtrl'
       })
+      .when('/pairs', {
+        templateUrl: 'views/pairs.html',
+        controller: 'PairsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
