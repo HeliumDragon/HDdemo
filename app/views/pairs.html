@@ -1,0 +1,5 @@
+<div class="pairsContainer">
+  <div ng-repeat="row in grids" class="row">
+    <div ng-repeat="tile in row track by $index" ng-click="select(tile)" class='col-xs-3'><tile class="tileCard" tile-value="{{tile.type}}" visible="{{tile.isVisible}}" ></tile</div>
+  </div>
+</div>
