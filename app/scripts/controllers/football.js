@@ -65,7 +65,7 @@ angular.module('hddemoApp')
            lc = matches.length - wc - dc;
           return {name:name, stat:[wc, dc, lc]};
         });
-        console.log(matchesByAwayTeam);
+        //console.log(matchesByAwayTeam);
         var homeStatData = [{
            name: 'Home Wins',
            data: _.map(homeMatchesStat, function(obj){return obj.stat[0];})
