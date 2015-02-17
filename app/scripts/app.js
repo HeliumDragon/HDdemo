@@ -58,6 +58,10 @@ angular
         templateUrl: 'views/widgets.html',
         controller: 'WidgetsCtrl'
       })
+      .when('/pairs', {
+        templateUrl: 'views/pairs.html',
+        controller: 'PairsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -191,3 +191,17 @@ ABOUT
 input.ng-dirty.ng-invalid {
   background: pink;
 }
+
+/************
+PAIRS
+************/
+.pairsContainer {
+  width: 35%;
+  margin: 2em auto;
+}
+.tile{
+  height: 49px;
+  background: #fff;
+  display: inline-block;
+  border: 1px solid black;
+}
