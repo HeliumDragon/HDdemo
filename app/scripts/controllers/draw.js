@@ -27,7 +27,7 @@ angular.module('hddemoApp')
       return '#'+ valToHex(r) + valToHex(g) + valToHex(b);
     };
     $scope.color = {red:'0', green:'0', blue:'0'};
-    $scope.colors = [{color:'black', chosen: true}, {color:'blue'}, {color:'red'}];
+    $scope.colors = [{color:'#d84c78', chosen: true}, {color:'#6592d1'}, {color:'#D95656'},{color:'#222'}];
     $scope.pickColor = function(){
       angular.forEach( $scope.colors, function(val){
         if(val.chosen===true){val.chosen=false;}
