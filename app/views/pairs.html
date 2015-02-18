@@ -1,5 +1,17 @@
 <div class="pairsContainer">
+  <h2>The Icon Pair Game</h2>
+  <div class="alertPane">
+    <div class="info alert alert-info" role="alert">
+      You found a pair!
+    </div>
+    <div class="win alert alert-success alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      Congratulations! You found every pair!
+    </div>
+  </div>
+
   <div ng-repeat="row in grids" class="row">
-    <div ng-repeat="tile in row track by $index" ng-click="select(tile)" class='col-xs-3'><tile class="tileCard" tile-value="{{tile.type}}" visible="{{tile.isVisible}}" ></tile</div>
+    <tile ng-repeat="tile in row track by $index" ng-click="select(tile)" class='col-xs-3 tileCard' tile-value="{{tile.type}}">
+    </tile>
   </div>
 </div>

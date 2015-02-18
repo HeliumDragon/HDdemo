@@ -12,7 +12,8 @@ angular.module('hddemoApp')
 
     var circle = {type:'circle'};
     var square = {type:'square'};
-
+    $('.info').hide();
+    $('.win').hide();
 
     $scope.selected = [];
     $scope.grids = [
@@ -23,10 +24,19 @@ angular.module('hddemoApp')
 
     $scope.select = function (tile) {
       if ($scope.selected.length === 2) {
+        var mismatch = $('.mismatch');
+
         $scope.selected.splice(0,2);
+
         setTimeout(function () {
-          $('.mismatch').text('');
-        }, 1000);
+          if(mismatch.hasClass('circle')){
+            mismatch.removeClass('circle');
+          }
+          if(mismatch.hasClass('square')) {
+            mismatch.removeClass('square');
+          }
+
+        }, 650);
       }
     };
 

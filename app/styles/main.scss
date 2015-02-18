@@ -11,7 +11,7 @@ body {
   padding-top: 50px;
 }
 .page-header{
-  color: #fff;
+  color: #bbb;
   small{
     color: #ddd;
   }
@@ -34,7 +34,6 @@ body {
 
 .main {
   padding: 20px 10px 10px;
-  background: #555;
 }
 
 .main .page-header {
@@ -196,12 +195,24 @@ input.ng-dirty.ng-invalid {
 PAIRS
 ************/
 .pairsContainer {
-  width: 35%;
+  width: 60%;
   margin: 2em auto;
 }
+
+.alertPane{
+  height: 60px;
+}
+
 .tile{
-  height: 49px;
-  background: #fff;
+  background: #666;
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid #fff;
+  outline: none;
+}
+
+.circle{
+  background: url("../images/circle-icon/dribbble.png") center no-repeat;
+}
+.square{
+  background: url("../images/square-icon/reddit.png") center no-repeat;
 }
