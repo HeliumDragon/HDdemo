@@ -32,7 +32,7 @@ angular
       .when('/', {
         //templateUrl: 'views/main.html',
         //controller: 'MainCtrl'
-        redirectTo: '/football'
+        redirectTo: '/pairs'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
