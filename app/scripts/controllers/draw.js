@@ -8,9 +8,9 @@
  * Controller of the hddemoApp
  */
 angular.module('hddemoApp')
-  .controller('DrawCtrl', function ($scope, $) {
-  	var ctx = $('canvas')[0].getContext('2d');
-    var $canvas = $('canvas'), mouseDown, lastEvent;
+  .controller('DrawCtrl', function ($scope, $, $swipe) {
+  	var ctx = $('#drawingCanvas')[0].getContext('2d');
+    var $canvas = $('#drawingCanvas'), mouseDown, lastEvent;
 
     var download = function() {
         var dataUrl = $canvas.get(0).toDataURL('img/png');
@@ -28,6 +28,7 @@ angular.module('hddemoApp')
     };
     $scope.color = {red:'0', green:'0', blue:'0'};
     $scope.colors = [{color:'#d84c78', chosen: true}, {color:'#6592d1'}, {color:'#D95656'},{color:'#222'}];
+    $scope.pickedColor = $scope.colors[0].color;
     $scope.pickColor = function(){
       angular.forEach( $scope.colors, function(val){
         if(val.chosen===true){val.chosen=false;}
@@ -49,22 +50,28 @@ angular.module('hddemoApp')
     $scope.getHex();
     document.getElementById('download').addEventListener('click', download, false);
     //On mouse events on the canvas
-    $canvas.mousedown(function(e){
-      lastEvent = e;
-      mouseDown = true;
-    }).mousemove(function(e){
-      //Draw lines
-      if(mouseDown) {
+
+    $swipe.bind($canvas, {
+      'start':function(e){
+        lastEvent = e;
+      //  mouseDown = true;
+      },
+      'move': function(e){
+        //canvas position
+        var pos = $canvas.offset();
         ctx.beginPath();
-        ctx.moveTo(lastEvent.offsetX, lastEvent.offsetY);
-        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.moveTo(lastEvent.x - pos.left, lastEvent.y-pos.top);
+        ctx.lineTo(e.x - pos.left, e.y-pos.top);
         ctx.strokeStyle =  $scope.pickedColor;
         ctx.stroke();
         lastEvent = e;
+      },
+      'end':function(){
+      //  mouseDown = false;
+      },
+      'cancel': function(){
+        //mouseDown = false;
       }
-    }).mouseup(function(){
-      mouseDown = false;
-    }).mouseleave(function(){
-      $canvas.mouseup();
     });
+
   });
