@@ -32,7 +32,7 @@ angular
       .when('/', {
         //templateUrl: 'views/main.html',
         //controller: 'MainCtrl'
-        redirectTo: '/pairs'
+        redirectTo: '/infographics'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -61,6 +61,10 @@ angular
       .when('/pairs', {
         templateUrl: 'views/pairs.html',
         controller: 'PairsCtrl'
+      })
+      .when('/infographics', {
+        templateUrl: 'views/infographics.html',
+        controller: 'InfographicsCtrl'
       })
       .otherwise({
         redirectTo: '/'
