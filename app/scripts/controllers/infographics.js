@@ -7,6 +7,10 @@
  * # InfographicsCtrl
  * Controller of the hddemoApp
  */
+
+ //TODO: Use meaningful statistics in the 2 charts below
+ // Add a new web chart
+ 
 angular.module('hddemoApp')
   .controller('InfographicsCtrl', function ($scope, $, Highcharts) {
 
