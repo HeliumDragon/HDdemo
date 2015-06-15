@@ -23,6 +23,7 @@ angular
     'jQuery',
     'Highcharts',
     'ui.grid',
+    //'ui.router',
     'ui.calendar',
     'ui.bootstrap',
     'createjs'
@@ -32,7 +33,7 @@ angular
       .when('/', {
         //templateUrl: 'views/main.html',
         //controller: 'MainCtrl'
-        redirectTo: '/infographics'
+        redirectTo: '/pairs'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
